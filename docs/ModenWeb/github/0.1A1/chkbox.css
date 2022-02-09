@@ -1,0 +1,39 @@
+input[type="checkbox"] + label::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 25%;
+    background: var(--color-chkbox-bg);
+    margin-right: 10px;
+    box-shadow: 4px 8px 8px #0003;
+    transition: all .5s;
+}
+input[type="checkbox"]:checked + label::before {background: var(--color-chkbox-bg-chked);transition: all .5s;}
+input[type="checkbox"]:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 26px;
+    border-left: 2px solid var(--color-chkbox-mark);
+    border-bottom: 2px solid var(--color-chkbox-mark);
+    height: 5px;
+    width: 10px;
+    transform: rotate(-45deg);
+    transition: all .5s;
+}
+input[type="checkbox"]:focus + label::before {
+    outline: none;box-shadow: 0 0px 8px var(--color-chkbox-bg);transition: all .5s;}
+input[type="checkbox"]:focus:checked + label::before {
+    outline: var(--color-chkbox-bg-chked) solid 1px;box-shadow: 0 0px 8px var(--color-chkbox-bg-chked);
+    transition: all .5s;}
+input[type="checkbox"]{position: absolute;}
+input[type="checkbox"]+label{display: block;position: relative;padding: 0 1.5rem;}
+input[type="checkbox"] {
+    position: absolute;height: 1px; width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);}
+input[type="checkbox"]:disabled + label::before {background: var(--color-txt); cursor: not-allowed}
+@media (pointer: coarse){
+    input[type="checkbox"]+label{margin-top: 5px; margin-bottom: 5px;}
+    input[type="checkbox"]:checked+label::after{top: 5px;left: 28px;}
+}

@@ -1,0 +1,96 @@
+input[type=text], input[type=url], input[type=password], 
+input[type=email], input[type=number], input[type=search],
+input[type=tel] {
+    background-color: var(--color-btn);
+    color: var(--color-txt);
+    border: 0;
+    border-bottom: 2px solid var(--color-txt);
+    border-radius: .25vw;
+    padding: .25vw;
+    transition: all .5s;
+    margin-bottom: 3px;
+}
+input[type=text]:hover, input[type=url]:hover, input[type=password]:hover, 
+input[type=email]:hover, input[type=number]:hover, input[type=search]:hover,
+input[type=tel]:hover {
+    border-bottom: 2px solid var(--color-btn-rev);
+    transition: all .5s;
+}
+input[type=text]:focus, input[type=url]:focus, input[type=password]:focus, 
+input[type=email]:focus, input[type=number]:focus, input[type=search]:focus,
+input[type=tel]:focus {
+    background-color: var(--color-txt-rev);
+    border-bottom: 2px solid var(--color-txt) !important;
+    transition: all .5s;
+    outline: none;
+}
+span[iconfor=text]::before{
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    top: .25em;
+    background-image: url(./icons/text.png);
+    background-size: 2em 1em;
+}
+span[iconfor=password]::before{
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    top: .25em;
+    background-image: url(./icons/pwd.png);
+    background-size: 2em 1em;
+}
+span[iconfor=url]::before{
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    top: .25em;
+    background-image: url(./icons/url.png);
+    background-size: 2em 1em;
+}
+span[iconfor=email]::before{
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    top: .25em;
+    background-image: url(./icons/email.png);
+    background-size: 2em 1em;
+}
+span[iconfor=number]::before{
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    top: .25em;
+    background-image: url(./icons/num.png);
+    background-size: 2em 1em;
+}
+span[iconfor=search]::before{
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    top: .25em;
+    background-image: url(./icons/search.png);
+    background-size: 2em 1em;
+}
+span[iconfor=tel]::before{
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    top: .25em;
+    background-image: url(./icons/tel.png);
+    background-size: 2em 1em;
+}

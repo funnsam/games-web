@@ -1,0 +1,29 @@
+input[type="radio"] + label::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background: var(--color-chkbox-bg);
+    box-shadow: 4px 8px 8px #0003;
+    transition: all .5s;
+}
+input[type="radio"]:checked + label::before {
+    background: var(--color-chkbox-bg-chked);transition: all .5s;
+}
+input[type="radio"]:focus + label::before {
+    outline: var(--color-chkbox-bg) solid 1px;box-shadow: 0 0px 8px var(--color-chkbox-bg);
+    transition: all .5s;}
+input[type="radio"]:focus:checked + label::before {
+    outline: none;box-shadow: 0 0px 8px var(--color-chkbox-bg-chked);
+    transition: all .5s;}
+input[type="radio"]{position: absolute;}
+input[type="radio"]+label{display: block;position: relative;padding: 0 1.5rem;}
+input[type="radio"] {
+    position: absolute;height: 1px; width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);}
+input[type="radio"]:disabled + label::before {background: var(--color-txt);cursor: not-allowed}
+@media (pointer: coarse){
+    input[type="radio"]+label{margin-top: 5px; margin-bottom: 5px;}
+}

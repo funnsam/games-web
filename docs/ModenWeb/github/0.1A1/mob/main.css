@@ -1,0 +1,41 @@
+@media (pointer: coarse){
+    @keyframes fadein {0% {opacity:0;}100% {opacity:1;}}
+    *{font-family: "Open Sans", sans-serif;margin: 0;color: var(--color-txt);font-size: 1.05rem;}
+    body{background-color: var(--color-bg);}
+    nav{
+        width: 100%;
+        min-height: calc(calc(var(--icon-size)/1.5) + 1.5vh);
+        color: #000;
+        display: flex;
+        flex-flow: row wrap;
+        border-radius: 0 0 .5vw .5vw;
+        background-color: var(--color-navbar);
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 4px 8px 8px #0003;
+        padding-bottom: 1.5vh;
+    }
+    .body{
+        overflow: auto;
+        margin: .5vw
+    }
+    button{background-color: var(--color-btn);
+        border: 2px solid var(--color-btn);
+        border-radius: .5rem;
+        padding: .25rem .45rem;
+        cursor: pointer;
+        box-shadow: 4px 8px 8px #0003;
+        transition: all .5s;
+    }
+    button:hover{background-color: #0000; transition: all .5s;}
+    button:active{background-color: #0000; transition: all .5s; box-shadow: inset 4px 8px 8px #0003;}
+    button.nav-btn{background-color: var(--color-btn-rev);
+            border: 2px solid var(--color-btn-rev);transition: all .5s;}
+    button.nav-btn:hover{background-color: #0000;transition: all .5s;}
+    .icon{width: calc(var(--icon-size)/1.5);height: calc(var(--icon-size)/1.5);
+        border-radius: 50%;box-shadow: 4px 8px 8px #0003;}
+    .icon-group{display: flex;flex-flow: row nowrap;align-items: center;margin: .5em;}
+    nav > *{animation-name: fadein;animation-duration: 1.5s;}
+    .icon-group > a{text-shadow: 4px 8px 8px #0003;margin-left: 5px;}
+    lable{text-shadow: 4px 8px 8px #0003;}
+}
